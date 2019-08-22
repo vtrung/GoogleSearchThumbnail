@@ -10,8 +10,12 @@ Makes a search for the argument on google images and parse out the src from the 
 
 python3 imgsearch.py [search term]
 
-i.e: python3 imgsearch.py '2015 toyota corolla'
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSonJxAfFZ1sX8BQzMBYumipvihwJBc_0s30cem1zikjmsNppRo1V-eSFM
+```
+    python3 imgsearch.py '2015 toyota corolla'    
+```
+```
+    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSonJxAfFZ1sX8BQzMBYumipvihwJBc_0s30cem1zikjmsNppRo1V-eSFM
+```
 
 ### Dependencies:
 [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/)
