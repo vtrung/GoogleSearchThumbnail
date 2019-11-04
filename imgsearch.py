@@ -1,16 +1,18 @@
 from sys import argv
 from bs4 import BeautifulSoup
 import requests
-import threading
 
-if __name__ == "__main__":
-    if len(argv) > 1:
-        symbols = argv[1:]
-        for symbol in symbols:
-            term = "2015 Corolla"
-            url = "https://www.google.com/search?q="+ symbol +"&tbm=isch"
-            r = requests.get(url)
-            #print(r.text)
-            soup = BeautifulSoup(r.text, "html.parser")
-            src = soup.select('#search img')[0].get('src')
-            print(src)
+
+class ImgSearch:
+    def test(self):
+        print("testing 1")
+    
+    # input string, a search term used for finding thumbnail
+    # return string, url of thumbnail image
+    def search(self, term):
+        url = "https://www.google.com/search?q="+ term +"&tbm=isch"
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, "html.parser")
+        src = soup.select('#search img')[0].get('src')
+        return src
+

@@ -18,4 +18,5 @@ python3 imgsearch.py [search term]
 ```
 
 ### Dependencies:
+RUN pip install -r requirements.txt
 [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/)
