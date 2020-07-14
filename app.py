@@ -1,4 +1,3 @@
-from sys import argv
 from imgsearch import ImgSearch
 from flask import Flask
 
@@ -14,17 +13,9 @@ def search_term(term = None):
     if term == None:
         return "Not Found"
     else:
-        print(term)
         result = imgs.search(term)
-        return result
-
-# if __name__ == "__main__":
-#     if len(argv) > 1:
-#         symbols = argv[1:]
-#         for term in symbols:
-#             testresult = imgs.search(term)
-#             print(testresult)
+        return "<img src='{}'/>".format(result)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
